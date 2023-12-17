@@ -1,0 +1,39 @@
+﻿@{
+
+    var total = "";
+    var totalMessage = "";
+    if (IsPost)
+    {
+        var name1 = Request["text1"];
+        var name2 = Request["text2"];
+
+        total = name1 + name2;
+        totalMessage = total;
+    }
+
+
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Full name</title>
+</head>
+<body>
+    <p>Enter first name and second names and then <a href="">show full name</a></p>
+    <form action="" method="post">
+        <div>
+            <label for="text1">First Name:</label>
+            <input type="text" name="text1" />
+            <br />
+
+            <label for="text1">Second Name</label>
+            <input type="text" name="text2" />
+            <br />
+            <input type="submit" value="Show Full Name" />
+
+        </div>
+    </form>
+    <p>@totalMessage</p>
+</body>
+</html>
